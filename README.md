@@ -10,8 +10,8 @@ and programmer safety.
 Google's protobuf project includes a conformance checking host program that generates a large number of test cases, feeds them to a test program that executes those test cases, then verifies the results.  This project provides the test program for Swift Protobuf that works with Google's conformance checking host to verify that Swift Protobuf is completely compatible with other implementations of Google's protobuf specification.
 
 For more information about Swift Protobuf, please look at:
-* [Swift Protobuf code generator plugin](https://gitlab.sd.apple.com/tkientzle/protoc-gen-swift)
-* [Swift Protobuf Runtime Library](https://gitlab.sd.apple.com/tkientzle/SwiftProtobufRuntime)
+* [Swift Protobuf code generator plugin](https://github.com/apple/swift-protobuf-plugin)
+* [Swift Protobuf Runtime Library](https://github.com/apple/swift-protobuf-runtime)
 
 ## Requirements
 
