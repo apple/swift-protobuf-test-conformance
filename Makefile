@@ -55,7 +55,6 @@ $(HOST):
 
 clean:
 	rm -rf .build
-	rm -rf _conformance_host
 
 update:
 	swift package update
