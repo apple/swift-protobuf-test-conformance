@@ -6,6 +6,44 @@
  *
  */
 
+//  Protocol Buffers - Google's data interchange format
+//  Copyright 2008 Google Inc.  All rights reserved.
+//  https://developers.google.com/protocol-buffers/
+// 
+//  Redistribution and use in source and binary forms, with or without
+//  modification, are permitted provided that the following conditions are
+//  met:
+// 
+//      * Redistributions of source code must retain the above copyright
+//  notice, this list of conditions and the following disclaimer.
+//      * Redistributions in binary form must reproduce the above
+//  copyright notice, this list of conditions and the following disclaimer
+//  in the documentation and/or other materials provided with the
+//  distribution.
+//      * Neither the name of Google Inc. nor the names of its
+//  contributors may be used to endorse or promote products derived from
+//  this software without specific prior written permission.
+// 
+//  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+//  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+//  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+//  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+//  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+//  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+//  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+//  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+//  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+//  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+//  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+//  Author: kenton@google.com (Kenton Varda)
+//   Based on original Protocol Buffers design by
+//   Sanjay Ghemawat, Jeff Dean, and others.
+// 
+//  The messages in this file describe the definitions found in .proto files.
+//  A valid .proto file can be translated directly to a FileDescriptorProto
+//  without any other information (e.g. without reading its imports).
+
+import Foundation
 import Protobuf
 
 
@@ -15,7 +53,6 @@ public struct Google_Protobuf_FileDescriptorSet: ProtobufGeneratedMessage {
   public var swiftClassName: String {return "Google_Protobuf_FileDescriptorSet"}
   public var protoMessageName: String {return "FileDescriptorSet"}
   public var protoPackageName: String {return "google.protobuf"}
-  public var anyTypeURL: String {return "type.googleapis.com/google.protobuf.FileDescriptorSet"}
   public var jsonFieldNames: [String: Int] {return [
     "file": 1,
   ]}
@@ -75,7 +112,6 @@ public struct Google_Protobuf_FileDescriptorProto: ProtobufGeneratedMessage {
   public var swiftClassName: String {return "Google_Protobuf_FileDescriptorProto"}
   public var protoMessageName: String {return "FileDescriptorProto"}
   public var protoPackageName: String {return "google.protobuf"}
-  public var anyTypeURL: String {return "type.googleapis.com/google.protobuf.FileDescriptorProto"}
   public var jsonFieldNames: [String: Int] {return [
     "name": 1,
     "package": 2,
@@ -397,7 +433,6 @@ public struct Google_Protobuf_DescriptorProto: ProtobufGeneratedMessage {
   public var swiftClassName: String {return "Google_Protobuf_DescriptorProto"}
   public var protoMessageName: String {return "DescriptorProto"}
   public var protoPackageName: String {return "google.protobuf"}
-  public var anyTypeURL: String {return "type.googleapis.com/google.protobuf.DescriptorProto"}
   public var jsonFieldNames: [String: Int] {return [
     "name": 1,
     "field": 2,
@@ -549,7 +584,6 @@ public struct Google_Protobuf_DescriptorProto: ProtobufGeneratedMessage {
     public var swiftClassName: String {return "Google_Protobuf_DescriptorProto.ExtensionRange"}
     public var protoMessageName: String {return "ExtensionRange"}
     public var protoPackageName: String {return "google.protobuf"}
-    public var anyTypeURL: String {return "type.googleapis.com/google.protobuf.DescriptorProto.ExtensionRange"}
     public var jsonFieldNames: [String: Int] {return [
       "start": 1,
       "end": 2,
@@ -621,7 +655,6 @@ public struct Google_Protobuf_DescriptorProto: ProtobufGeneratedMessage {
     public var swiftClassName: String {return "Google_Protobuf_DescriptorProto.ReservedRange"}
     public var protoMessageName: String {return "ReservedRange"}
     public var protoPackageName: String {return "google.protobuf"}
-    public var anyTypeURL: String {return "type.googleapis.com/google.protobuf.DescriptorProto.ReservedRange"}
     public var jsonFieldNames: [String: Int] {return [
       "start": 1,
       "end": 2,
@@ -819,7 +852,6 @@ public struct Google_Protobuf_FieldDescriptorProto: ProtobufGeneratedMessage {
   public var swiftClassName: String {return "Google_Protobuf_FieldDescriptorProto"}
   public var protoMessageName: String {return "FieldDescriptorProto"}
   public var protoPackageName: String {return "google.protobuf"}
-  public var anyTypeURL: String {return "type.googleapis.com/google.protobuf.FieldDescriptorProto"}
   public var jsonFieldNames: [String: Int] {return [
     "name": 1,
     "number": 3,
@@ -1403,7 +1435,6 @@ public struct Google_Protobuf_OneofDescriptorProto: ProtobufGeneratedMessage {
   public var swiftClassName: String {return "Google_Protobuf_OneofDescriptorProto"}
   public var protoMessageName: String {return "OneofDescriptorProto"}
   public var protoPackageName: String {return "google.protobuf"}
-  public var anyTypeURL: String {return "type.googleapis.com/google.protobuf.OneofDescriptorProto"}
   public var jsonFieldNames: [String: Int] {return [
     "name": 1,
     "options": 2,
@@ -1528,7 +1559,6 @@ public struct Google_Protobuf_EnumDescriptorProto: ProtobufGeneratedMessage {
   public var swiftClassName: String {return "Google_Protobuf_EnumDescriptorProto"}
   public var protoMessageName: String {return "EnumDescriptorProto"}
   public var protoPackageName: String {return "google.protobuf"}
-  public var anyTypeURL: String {return "type.googleapis.com/google.protobuf.EnumDescriptorProto"}
   public var jsonFieldNames: [String: Int] {return [
     "name": 1,
     "value": 2,
@@ -1672,7 +1702,6 @@ public struct Google_Protobuf_EnumValueDescriptorProto: ProtobufGeneratedMessage
   public var swiftClassName: String {return "Google_Protobuf_EnumValueDescriptorProto"}
   public var protoMessageName: String {return "EnumValueDescriptorProto"}
   public var protoPackageName: String {return "google.protobuf"}
-  public var anyTypeURL: String {return "type.googleapis.com/google.protobuf.EnumValueDescriptorProto"}
   public var jsonFieldNames: [String: Int] {return [
     "name": 1,
     "number": 2,
@@ -1814,7 +1843,6 @@ public struct Google_Protobuf_ServiceDescriptorProto: ProtobufGeneratedMessage {
   public var swiftClassName: String {return "Google_Protobuf_ServiceDescriptorProto"}
   public var protoMessageName: String {return "ServiceDescriptorProto"}
   public var protoPackageName: String {return "google.protobuf"}
-  public var anyTypeURL: String {return "type.googleapis.com/google.protobuf.ServiceDescriptorProto"}
   public var jsonFieldNames: [String: Int] {return [
     "name": 1,
     "method": 2,
@@ -1958,7 +1986,6 @@ public struct Google_Protobuf_MethodDescriptorProto: ProtobufGeneratedMessage {
   public var swiftClassName: String {return "Google_Protobuf_MethodDescriptorProto"}
   public var protoMessageName: String {return "MethodDescriptorProto"}
   public var protoPackageName: String {return "google.protobuf"}
-  public var anyTypeURL: String {return "type.googleapis.com/google.protobuf.MethodDescriptorProto"}
   public var jsonFieldNames: [String: Int] {return [
     "name": 1,
     "inputType": 2,
@@ -2150,11 +2177,40 @@ public struct Google_Protobuf_MethodDescriptorProto: ProtobufGeneratedMessage {
   }
 }
 
+//  ===================================================================
+//  Options
+//  Each of the definitions above may have "options" attached.  These are
+//  just annotations which may cause code to be generated slightly differently
+//  or may contain hints for code that manipulates protocol messages.
+// 
+//  Clients may define custom options as extensions of the *Options messages.
+//  These extensions may not yet be known at parsing time, so the parser cannot
+//  store the values in them.  Instead it stores them in a field in the *Options
+//  message called uninterpreted_option. This field must have the same name
+//  across all *Options messages. We then use this field to populate the
+//  extensions when we build a descriptor, at which point all protos have been
+//  parsed and so all extensions are known.
+// 
+//  Extension numbers for custom options may be chosen as follows:
+//  * For options which will only be used within a single application or
+//    organization, or for experimental options, use field numbers 50000
+//    through 99999.  It is up to you to ensure that you do not use the
+//    same number for multiple options.
+//  * For options which will be published and used publicly by multiple
+//    independent entities, e-mail protobuf-global-extension-registry@google.com
+//    to reserve extension numbers. Simply provide your project name (e.g.
+//    Objective-C plugin) and your project website (if available) -- there's no
+//    need to explain how you intend to use them. Usually you only need one
+//    extension number. You can declare multiple options with only one extension
+//    number by putting them in a sub-message. See the Custom Options section of
+//    the docs for examples:
+//    https://developers.google.com/protocol-buffers/docs/proto#options
+//    If this turns out to be popular, a web service will be set up
+//    to automatically assign option numbers.
 public struct Google_Protobuf_FileOptions: ProtobufGeneratedMessage, ProtobufExtensibleMessage {
   public var swiftClassName: String {return "Google_Protobuf_FileOptions"}
   public var protoMessageName: String {return "FileOptions"}
   public var protoPackageName: String {return "google.protobuf"}
-  public var anyTypeURL: String {return "type.googleapis.com/google.protobuf.FileOptions"}
   public var jsonFieldNames: [String: Int] {return [
     "javaPackage": 1,
     "javaOuterClassname": 8,
@@ -2560,7 +2616,6 @@ public struct Google_Protobuf_MessageOptions: ProtobufGeneratedMessage, Protobuf
   public var swiftClassName: String {return "Google_Protobuf_MessageOptions"}
   public var protoMessageName: String {return "MessageOptions"}
   public var protoPackageName: String {return "google.protobuf"}
-  public var anyTypeURL: String {return "type.googleapis.com/google.protobuf.MessageOptions"}
   public var jsonFieldNames: [String: Int] {return [
     "messageSetWireFormat": 1,
     "noStandardDescriptorAccessor": 2,
@@ -2748,7 +2803,6 @@ public struct Google_Protobuf_FieldOptions: ProtobufGeneratedMessage, ProtobufEx
   public var swiftClassName: String {return "Google_Protobuf_FieldOptions"}
   public var protoMessageName: String {return "FieldOptions"}
   public var protoPackageName: String {return "google.protobuf"}
-  public var anyTypeURL: String {return "type.googleapis.com/google.protobuf.FieldOptions"}
   public var jsonFieldNames: [String: Int] {return [
     "ctype": 1,
     "packed": 2,
@@ -3119,7 +3173,6 @@ public struct Google_Protobuf_OneofOptions: ProtobufGeneratedMessage, ProtobufEx
   public var swiftClassName: String {return "Google_Protobuf_OneofOptions"}
   public var protoMessageName: String {return "OneofOptions"}
   public var protoPackageName: String {return "google.protobuf"}
-  public var anyTypeURL: String {return "type.googleapis.com/google.protobuf.OneofOptions"}
   public var jsonFieldNames: [String: Int] {return [
     "uninterpretedOption": 999,
   ]}
@@ -3199,7 +3252,6 @@ public struct Google_Protobuf_EnumOptions: ProtobufGeneratedMessage, ProtobufExt
   public var swiftClassName: String {return "Google_Protobuf_EnumOptions"}
   public var protoMessageName: String {return "EnumOptions"}
   public var protoPackageName: String {return "google.protobuf"}
-  public var anyTypeURL: String {return "type.googleapis.com/google.protobuf.EnumOptions"}
   public var jsonFieldNames: [String: Int] {return [
     "allowAlias": 2,
     "deprecated": 3,
@@ -3309,7 +3361,6 @@ public struct Google_Protobuf_EnumValueOptions: ProtobufGeneratedMessage, Protob
   public var swiftClassName: String {return "Google_Protobuf_EnumValueOptions"}
   public var protoMessageName: String {return "EnumValueOptions"}
   public var protoPackageName: String {return "google.protobuf"}
-  public var anyTypeURL: String {return "type.googleapis.com/google.protobuf.EnumValueOptions"}
   public var jsonFieldNames: [String: Int] {return [
     "deprecated": 1,
     "uninterpretedOption": 999,
@@ -3405,7 +3456,6 @@ public struct Google_Protobuf_ServiceOptions: ProtobufGeneratedMessage, Protobuf
   public var swiftClassName: String {return "Google_Protobuf_ServiceOptions"}
   public var protoMessageName: String {return "ServiceOptions"}
   public var protoPackageName: String {return "google.protobuf"}
-  public var anyTypeURL: String {return "type.googleapis.com/google.protobuf.ServiceOptions"}
   public var jsonFieldNames: [String: Int] {return [
     "deprecated": 33,
     "uninterpretedOption": 999,
@@ -3416,6 +3466,11 @@ public struct Google_Protobuf_ServiceOptions: ProtobufGeneratedMessage, Protobuf
   ]}
 
   var unknown = ProtobufUnknownStorage()
+
+  //  Note:  Field numbers 1 through 32 are reserved for Google's internal RPC
+  //    framework.  We apologize for hoarding these numbers to ourselves, but
+  //    we were already using them long before we decided to release Protocol
+  //    Buffers.
 
   ///   Is this service deprecated?
   ///   Depending on the target platform, this can emit Deprecated annotations
@@ -3501,7 +3556,6 @@ public struct Google_Protobuf_MethodOptions: ProtobufGeneratedMessage, ProtobufE
   public var swiftClassName: String {return "Google_Protobuf_MethodOptions"}
   public var protoMessageName: String {return "MethodOptions"}
   public var protoPackageName: String {return "google.protobuf"}
-  public var anyTypeURL: String {return "type.googleapis.com/google.protobuf.MethodOptions"}
   public var jsonFieldNames: [String: Int] {return [
     "deprecated": 33,
     "uninterpretedOption": 999,
@@ -3512,6 +3566,11 @@ public struct Google_Protobuf_MethodOptions: ProtobufGeneratedMessage, ProtobufE
   ]}
 
   var unknown = ProtobufUnknownStorage()
+
+  //  Note:  Field numbers 1 through 32 are reserved for Google's internal RPC
+  //    framework.  We apologize for hoarding these numbers to ourselves, but
+  //    we were already using them long before we decided to release Protocol
+  //    Buffers.
 
   ///   Is this method deprecated?
   ///   Depending on the target platform, this can emit Deprecated annotations
@@ -3603,7 +3662,6 @@ public struct Google_Protobuf_UninterpretedOption: ProtobufGeneratedMessage {
   public var swiftClassName: String {return "Google_Protobuf_UninterpretedOption"}
   public var protoMessageName: String {return "UninterpretedOption"}
   public var protoPackageName: String {return "google.protobuf"}
-  public var anyTypeURL: String {return "type.googleapis.com/google.protobuf.UninterpretedOption"}
   public var jsonFieldNames: [String: Int] {return [
     "name": 2,
     "identifierValue": 3,
@@ -3634,7 +3692,6 @@ public struct Google_Protobuf_UninterpretedOption: ProtobufGeneratedMessage {
     public var swiftClassName: String {return "Google_Protobuf_UninterpretedOption.NamePart"}
     public var protoMessageName: String {return "NamePart"}
     public var protoPackageName: String {return "google.protobuf"}
-    public var anyTypeURL: String {return "type.googleapis.com/google.protobuf.UninterpretedOption.NamePart"}
     public var jsonFieldNames: [String: Int] {return [
       "namePart": 1,
       "isExtension": 2,
@@ -3707,7 +3764,7 @@ public struct Google_Protobuf_UninterpretedOption: ProtobufGeneratedMessage {
 
   public var doubleValue: Double? = nil
 
-  public var stringValue: [UInt8]? = nil
+  public var stringValue: Data? = nil
 
   public var aggregateValue: String? = nil
 
@@ -3718,7 +3775,7 @@ public struct Google_Protobuf_UninterpretedOption: ProtobufGeneratedMessage {
     positiveIntValue: UInt64? = nil,
     negativeIntValue: Int64? = nil,
     doubleValue: Double? = nil,
-    stringValue: [UInt8]? = nil,
+    stringValue: Data? = nil,
     aggregateValue: String? = nil)
   {
     if !name.isEmpty {
@@ -3802,13 +3859,15 @@ public struct Google_Protobuf_UninterpretedOption: ProtobufGeneratedMessage {
   }
 }
 
+//  ===================================================================
+//  Optional source code info
+
 ///   Encapsulates information about the original source file from which a
 ///   FileDescriptorProto was generated.
 public struct Google_Protobuf_SourceCodeInfo: ProtobufGeneratedMessage {
   public var swiftClassName: String {return "Google_Protobuf_SourceCodeInfo"}
   public var protoMessageName: String {return "SourceCodeInfo"}
   public var protoPackageName: String {return "google.protobuf"}
-  public var anyTypeURL: String {return "type.googleapis.com/google.protobuf.SourceCodeInfo"}
   public var jsonFieldNames: [String: Int] {return [
     "location": 1,
   ]}
@@ -3822,7 +3881,6 @@ public struct Google_Protobuf_SourceCodeInfo: ProtobufGeneratedMessage {
     public var swiftClassName: String {return "Google_Protobuf_SourceCodeInfo.Location"}
     public var protoMessageName: String {return "Location"}
     public var protoPackageName: String {return "google.protobuf"}
-    public var anyTypeURL: String {return "type.googleapis.com/google.protobuf.SourceCodeInfo.Location"}
     public var jsonFieldNames: [String: Int] {return [
       "path": 1,
       "span": 2,
@@ -4099,7 +4157,6 @@ public struct Google_Protobuf_GeneratedCodeInfo: ProtobufGeneratedMessage {
   public var swiftClassName: String {return "Google_Protobuf_GeneratedCodeInfo"}
   public var protoMessageName: String {return "GeneratedCodeInfo"}
   public var protoPackageName: String {return "google.protobuf"}
-  public var anyTypeURL: String {return "type.googleapis.com/google.protobuf.GeneratedCodeInfo"}
   public var jsonFieldNames: [String: Int] {return [
     "annotation": 1,
   ]}
@@ -4113,7 +4170,6 @@ public struct Google_Protobuf_GeneratedCodeInfo: ProtobufGeneratedMessage {
     public var swiftClassName: String {return "Google_Protobuf_GeneratedCodeInfo.Annotation"}
     public var protoMessageName: String {return "Annotation"}
     public var protoPackageName: String {return "google.protobuf"}
-    public var anyTypeURL: String {return "type.googleapis.com/google.protobuf.GeneratedCodeInfo.Annotation"}
     public var jsonFieldNames: [String: Int] {return [
       "path": 1,
       "sourceFile": 2,

@@ -23,9 +23,10 @@ import Glibc
 import Darwin.C
 #endif
 
+import Foundation
 import Protobuf
 
-func readRequest() -> [UInt8]? {
+func readRequest() -> Data? {
     var rawCount: UInt32 = 0
     let read1 = fread(&rawCount, 1, 4, stdin)
     let count = Int(rawCount)
@@ -37,19 +38,20 @@ func readRequest() -> [UInt8]? {
     if read2 < count {
         return nil
     }
-    return buff
+    return Data(bytes: buff)
 }
 
-func writeResponse(data: [UInt8]) {
-    var count = UInt32(data.count)
+func writeResponse(data: Data) {
+    let bytes = [UInt8](data)
+    var count = UInt32(bytes.count)
     fwrite(&count, 4, 1, stdout)
-    _ = data.withUnsafeBufferPointer { bp in
+    _ = bytes.withUnsafeBufferPointer { bp in
         fwrite(bp.baseAddress, Int(count), 1, stdout)
     }
     fflush(stdout)
 }
 
-func buildResponse(protobuf: [UInt8]) -> Conformance_ConformanceResponse {
+func buildResponse(protobuf: Data) -> Conformance_ConformanceResponse {
     var response = Conformance_ConformanceResponse()
 
     let request: Conformance_ConformanceRequest
