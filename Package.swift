@@ -4,6 +4,6 @@ let package = Package(
         name: "Conformance",
         dependencies: [
           .Package(url: "https://github.com/apple/swift-protobuf-runtime.git",
-                   Version(0,9,20))
+                   Version(0,9,21))
         ]
 )
