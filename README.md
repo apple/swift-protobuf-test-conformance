@@ -20,7 +20,7 @@ This test suite requires Swift 3.0, standard command-line tools such as make and
 ## Building the Tests
 
 You should start by editing the `Makefile` and adjusting these two lines to match your system:
-```
+```Makefile
 PROTOC=protoc
 PROTOBUF_PROJECT_DIR=../protobuf
 ```
@@ -28,7 +28,7 @@ PROTOBUF_PROJECT_DIR=../protobuf
 These lines specify how to run the installed `protoc` program on your system, and where to find the Google protobuf source tree.
 
 After setting these variables, you can type:
-```
+```console
 $ make test
 ```
 
@@ -38,8 +38,8 @@ It will then run the test suite and print out any discrepancies found by the too
 
 ## If you have problems
 
-The most common problem area is building Google's conformance host program.  You may find it easier to switch to the directory where you have checked out Google's protobuf sources and build the host program there:
-```
+The most common problem area is building Google's conformance host program.  You may find it easier to switch to the directory where you have checked out Google's protobuf sources and build the host program manually:
+```console
 $ cd protobuf
 $ ./configure
 $ make -C src
@@ -47,16 +47,10 @@ $ make -C conformance
 ```
 
 You can then manually run the conformance test using the following commands:
-```
-$ cd SwiftProtobufConformance
+```console
+$ cd swift-protobuf-test-conformance
 $ ../protobuf/conformance/conformance-test-runner --failure_list failure_list_swift.txt .build/debug/Conformance
 ```
-
-This should leave the `conformance-test-runner` program in the `conformance` directory.  You can then edit the SwiftProtobufConformance Makefile and set the `HOST` variable to the full path of the `conformance-test-runner` program.  Now when you try to
-```
-$ make test
-```
-the Makefile will use the conformance host that you just built.
 
 ## Known Issues
 
