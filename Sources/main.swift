@@ -24,7 +24,7 @@ import Darwin.C
 #endif
 
 import Foundation
-import Protobuf
+import SwiftProtobuf
 
 func readRequest() -> Data? {
     var rawCount: UInt32 = 0
